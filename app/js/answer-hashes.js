@@ -24,7 +24,7 @@ window.ANSWER_HASHES = {
       "junior": null
     },
     "river": {
-      "main": "f8a6f44f2c00152045c0d3f4ac7941527a26d71e757d70aa2cc573c24c063e38",
+      "main": "22c870360f55ce346c5e05378150596cb52b327da8f409fdf7d61e0641d8c8c1",
       "junior": null
     },
     "island": {

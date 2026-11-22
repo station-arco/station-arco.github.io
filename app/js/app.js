@@ -749,9 +749,11 @@
   function foldNote(r) {
     return `<div class="badguys-note wheel-note">
       <p class="radio-from">Intercepted from the Bad Guys</p>
-      <p>We hid our next stop in plain sight. Our bulletin is just a jumble of letters. Nobody will ever read it.</p>
-      <ol class="wheel-steps">${r.fold.steps.map((s) => `<li>${esc(s)}</li>`).join("")}</ol>
-      <button class="link" data-action="wheel-plain">Can't work it out? Show the riddle instead</button>
+      <p>${esc(r.fold.boast)}</p>
+      ${view.foldSteps
+        ? `<ol class="wheel-steps">${r.fold.steps.map((s) => `<li>${esc(s)}</li>`).join("")}</ol>`
+        : `<p><button class="link" data-action="fold-steps">Stuck? Show how to fold it</button></p>`}
+      <button class="link" data-action="wheel-plain">Still stuck? Show the riddle instead</button>
     </div>`;
   }
 
@@ -995,6 +997,7 @@
       case "join": return go("join");
       case "share-invite": return shareInvite(t);
       case "wheel-plain": view.plain = true; return render();
+      case "fold-steps": view.foldSteps = true; return render();
       case "home": return home();
       case "board": return S.started ? go("board") : home();
       case "settings": return go("settings");

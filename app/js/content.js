@@ -305,6 +305,7 @@ window.GAME = {
         "Find where Arco goes to play. A sign there brags that this town beat the whole world to atomic light, and it knows how far you are above the sea.",
       // The Bad Guys bulletin in the field kit (print/bad-guys-bulletin.html) is a fold-in: folded right, it names this stop.
       fold: {
+        boast: "We hid our next stop in plain sight. Our bulletin is a jumble of letters, and the only way to read it is to make A and B meet. Good luck with that.",
         steps: [
           "Get the Bad Guys bulletin out of your field kit.",
           "Fold it back on the dashed line.",
@@ -319,10 +320,12 @@ window.GAME = {
         "Arco sits about 5,320 feet above sea level, a little higher than Denver, the Mile High City, at 5,280 feet. " +
         "The sign here repeats the town's proudest claim: in 1955 it became the first city in the world lit by atomic power.",
       source: { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Arco,_Idaho" },
-      clue: "Play the signal and decode it with your Morse card. It names something written on the sign. Type the number that goes with it.",
+      // Three steps: decode the Morse (ELEVATION), read that number off the sign (5320), then take away the year
+      // Arco was first lit by the atom (1955, from the briefing and the Peace Relay). Answer: 3365.
+      clue: "Decode the signal with your Morse card. It names a number on the sign. The Bad Guys added the year this town was first lit by the atom to it. Take that year back off to get the real code.",
       morse: "ELEVATION",
       answerKind: "number",
-      hints: ["The message is nine letters. The first one is a single dot: E.", "It spells ELEVATION. Read the elevation on the sign."],
+      hints: ["The signal spells ELEVATION. Find the elevation on the sign.", "The town was first lit by the atom in 1955. Take 1955 away from the elevation."],
       junior: { type: "open", prompt: "Find the word FIRST on the sign. Point to it, then tap Done." },
     },
     {
