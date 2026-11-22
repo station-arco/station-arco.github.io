@@ -289,11 +289,11 @@ window.GAME = {
       source: { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/C._A._Bottolfsen" },
       // The newspaper isn't in the field kit: a copy for each family is hidden in a box at the park (see print/arco-advertiser.html).
       // SCOUT: once you pick the hiding spot, make the first hint describe it.
-      clue: "Find the old front page the Bad Guys stashed in this park. Then read the first letter of each headline, from top to bottom.",
+      clue: "Find the old front page the Bad Guys stashed in this park. They hid their word in plain sight: it's how every story on the page begins, in order.",
       answerKind: "word",
       hints: [
         "The Bad Guys like a quick getaway. Check along the fence by the parking lot.",
-        "There are five headlines.",
+        "Read the first letter of each of the five headlines, from top to bottom.",
         "It's something Arco was the first town to get from the atom.",
       ],
       junior: { type: "honor", prompt: "Find the turkey hiding in the newspaper ads. Tap when you find it." },
