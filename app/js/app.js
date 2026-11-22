@@ -299,7 +299,7 @@
         return `${topbar(true)}<section class="screen">
           <h1>${esc(label(id))}</h1>
           ${pos ? `<p class="help">Stop ${pos} of ${S.team.route.length} on your route. Its name shows up once you get there.</p>` : ""}
-          ${r.wheel && !view.plain ? wheelNote(r) : `<div class="badguys-note">
+          ${r.wheel && !view.plain ? wheelNote(r) : r.fold && !view.plain ? foldNote(r) : `<div class="badguys-note">
             <p class="radio-from">Intercepted from the Bad Guys</p>
             <p>${esc(r.find)}</p>
           </div>`}
@@ -742,6 +742,16 @@
         <li>Find each letter above on the inner wheel. The outer letter next to it is the real one. Write them down.</li>
       </ol>
       <button class="link" data-action="wheel-plain">Can't read it? Show the riddle instead</button>
+    </div>`;
+  }
+
+  // A riddle hidden in the fold-in bulletin from the field kit.
+  function foldNote(r) {
+    return `<div class="badguys-note wheel-note">
+      <p class="radio-from">Intercepted from the Bad Guys</p>
+      <p>We hid our next stop in plain sight. Our bulletin is just a jumble of letters. Nobody will ever read it.</p>
+      <ol class="wheel-steps">${r.fold.steps.map((s) => `<li>${esc(s)}</li>`).join("")}</ol>
+      <button class="link" data-action="wheel-plain">Can't work it out? Show the riddle instead</button>
     </div>`;
   }
 

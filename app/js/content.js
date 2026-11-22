@@ -302,7 +302,16 @@ window.GAME = {
       place: "Arco Rec Center, under the First City sign",
       mapQuery: "Arco Recreation Center, Arco, ID", // SCOUT: check this lands on the Rec Center
       find:
-        "Our next jammer hides under a sign that brags about the first atomic lights in the world. It also says how high up you are.",
+        "Find where Arco goes to play. A sign there brags that this town beat the whole world to atomic light, and it knows how far you are above the sea.",
+      // The Bad Guys bulletin in the field kit (print/bad-guys-bulletin.html) is a fold-in: folded right, it names this stop.
+      fold: {
+        steps: [
+          "Get the Bad Guys bulletin out of your field kit.",
+          "Fold it back on the dashed line.",
+          "Fold it forward on the dotted line, so arrow B lands right on arrow A.",
+          "Read what's left.",
+        ],
+      },
       transmission:
         "Station ARCO to all agents.\n\nWe caught a Bad Guys message sent the old way, the way Count von Arco's radio stations did it: dots and dashes. " +
         "Decode it with your Morse card. It tells you which number on the sign to read. Over.",
