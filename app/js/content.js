@@ -282,14 +282,20 @@ window.GAME = {
         "A newspaperman from this town grew up to run the whole state. Twice. The park with his name hides our next jammer.",
       transmission:
         "Station ARCO to all agents.\n\nIn 1910 a 19-year-old named Clarence Bottolfsen came to Arco to run the town newspaper, the Arco Advertiser. " +
-        "He ended up governor of Idaho. The Bad Guys hid a word inside an old front page. Open the newspaper in your field kit. Over.",
+        "He ended up governor of Idaho. The Bad Guys stole one of his old front pages and stashed it somewhere in this park. Find it, then find the word they hid inside. Over.",
       history:
         "C. A. Bottolfsen came to Arco in 1910, at 19, to manage the Arco Advertiser. He later bought the paper and published it until 1949. " +
         "He was Idaho's 17th governor from 1939 to 1941 and its 19th from 1943 to 1945. This park is named for him.",
       source: { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/C._A._Bottolfsen" },
-      clue: "Read the first letter of each headline on the front page, from top to bottom.",
+      // The newspaper isn't in the field kit: a copy for each family is hidden in a box at the park (see print/arco-advertiser.html).
+      // SCOUT: once you pick the hiding spot, make the first hint describe it.
+      clue: "Find the old front page the Bad Guys stashed in this park. Then read the first letter of each headline, from top to bottom.",
       answerKind: "word",
-      hints: ["There are five headlines.", "It's something Arco was the first town to get from the atom."],
+      hints: [
+        "The Bad Guys like a quick getaway. Check along the fence by the parking lot.",
+        "There are five headlines.",
+        "It's something Arco was the first town to get from the atom.",
+      ],
       junior: { type: "honor", prompt: "Find the turkey hiding in the newspaper ads. Tap when you find it." },
     },
     {

@@ -71,10 +71,10 @@ screen, then fades out under the Bad Guys' first words.
 >
 > The Bad Guys are spreading a rumor that the numbers on that hill mark old floods of the Big Lost River. Prove them wrong. Nobody climbs today. Use binoculars, or zoom in with a phone camera. Over.
 
-**relay-press.mp3** (Press Relay)
+**relay-press.mp3** (Press Relay; re-record: the newspaper is now hidden in the park)
 > Station ARCO to all agents.
 >
-> In 1910 a 19-year-old named Clarence Bottolfsen came to Arco to run the town newspaper, the Arco Advertiser. He ended up governor of Idaho. The Bad Guys hid a word inside an old front page. Open the newspaper in your field kit. Over.
+> In 1910 a 19-year-old named Clarence Bottolfsen came to Arco to run the town newspaper, the Arco Advertiser. He ended up governor of Idaho. The Bad Guys stole one of his old front pages and stashed it somewhere in this park. Find it, then find the word they hid inside. Over.
 
 **relay-rec.mp3** (Rec Center Relay, new)
 > Station ARCO to all agents.
