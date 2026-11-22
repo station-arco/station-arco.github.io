@@ -266,9 +266,9 @@ window.GAME = {
       source: { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Arco,_Idaho" },
       // The real instructions are written in invisible ink on the Bad Guys memo in the field kit (print/bad-guys-memo.html):
       // FIND THE CLASS OF 1955 + 11 ON THE HILL. TYPE THE TWO DIGITS.
-      clue: "The Bad Guys memo in your field kit has something hidden at the bottom. Shine your UV light on it, then do what it says.",
+      clue: "The Bad Guys wrote more on their memo than they meant anyone to read. Some ink only shows up in the right kind of light.",
       answerKind: "number",
-      hints: ["Turn the UV light on and hold it close to the empty space at the bottom of the memo.", "The memo says to find the class of 1955 plus 11. Look for 66 on the hill."],
+      hints: ["Shine the UV light from your field kit on the empty space at the bottom of the Bad Guys memo, then do what it says.", "The hidden words say to find the class of 1955 plus 11. Look for 66 on the hill."],
       junior: { type: "open", prompt: "With binoculars, find the year you were born on the hill. Tap Done when you see it." },
     },
     {
