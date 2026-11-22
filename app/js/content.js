@@ -216,7 +216,7 @@ window.GAME = {
         "electricity from the BORAX-III reactor at the National Reactor Testing Station, southeast of town, lit Arco for about an hour. " +
         "That testing station is now Idaho National Laboratory.",
       source: { label: "HMDB", url: "https://www.hmdb.org/m.asp?m=68916" },
-      clue: "The Bad Guys set this relay to the wrong date. Type the date on the marker as numbers: the month, the day, then the last two digits of the year.",
+      clue: "The Bad Guys set this relay to the wrong date. Set it back to the correct date: type the date on the marker as numbers, the month, the day, then the last two digits of the year.",
       answerKind: "number",
       hints: ["The date is in July.", "July is the 7th month. Then the day, then 55."],
       junior: { type: "count", prompt: "Count the words in the big title at the top of the marker." },
