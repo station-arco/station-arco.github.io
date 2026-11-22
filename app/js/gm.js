@@ -11,7 +11,7 @@
     { sender: "Ambassador Gobbles", voice: "gobbles" },
   ];
   const SAVED_LINES = [
-    { sender: "Operator Arco", body: "Station ARCO to all agents. Head to the Arco Rec Center now. The switch goes at noon. Over." },
+    { sender: "Operator Arco", body: "Station ARCO to all agents. Head back to headquarters at the Beal House now. The switch goes at sundown. Over." },
     { sender: "Operator Arco", body: "Station ARCO to all agents. Check in. If you're stuck, use a hint. It only costs 25 points. Over." },
   ];
   const FACT_LABELS = { weddingYear: "Wedding year", pet: "Pet", favorite: "Favorite", place: "Place", secret: "Secret" };

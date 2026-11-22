@@ -87,8 +87,8 @@
       <circle cx="306" cy="16" r="5" fill="#fff" class="blink"/>
     </svg>`,
 
-    // Noon: the power goes out across Arco.
-    blackout: `<svg viewBox="0 0 320 180" role="img" aria-label="Arco's lights going out at noon">
+    // Sundown: the power goes out across Arco.
+    blackout: `<svg viewBox="0 0 320 180" role="img" aria-label="Arco's lights going out at sundown">
       <rect width="320" height="180" fill="#9fb3c8"/>
       <rect width="320" height="180" fill="#2d3340" class="dusk"/>
       <path d="M0 130 Q60 92 120 116 T240 104 T320 112 V180 H0z" fill="#6f665c"/>
@@ -97,11 +97,11 @@
       <g transform="translate(276 38)">
         <circle r="24" fill="${LIME}" stroke="${LAVA}" stroke-width="3"/>
         ${Array.from({ length: 12 }, (_, i) => `<rect x="-1" y="-21" width="2" height="4" fill="${LAVA}" transform="rotate(${i * 30})"/>`).join("")}
-        <rect x="-1.6" y="-16" width="3.2" height="16" rx="1.6" fill="${RED}"/>
+        <rect x="-1.6" y="-16" width="3.2" height="16" rx="1.6" fill="${RED}" transform="rotate(150)"/>
         <rect x="-1.2" y="-19" width="2.4" height="19" rx="1.2" fill="${LAVA}"/>
         <circle r="2.4" fill="${LAVA}"/>
       </g>
-      <text x="276" y="80" text-anchor="middle" font-family="Overpass Mono, monospace" font-weight="600" font-size="11" fill="${LIME}">12:00</text>
+      <text x="276" y="80" text-anchor="middle" font-family="Overpass Mono, monospace" font-weight="600" font-size="11" fill="${LIME}">5:00 PM</text>
       ${/* the black beat: the screen goes dark and only the Bad Guys' eyes show */ ""}
       <g class="black-beat">
         <rect width="320" height="180" fill="#000"/>

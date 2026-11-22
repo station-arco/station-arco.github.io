@@ -46,6 +46,7 @@ then visit http://localhost:8000. Settings has demo tools: show answers, send a 
 ## Game day flow
 
 1. Families sign up ahead of time. Their phones show a countdown to November 26 and their team code.
+   The game starts mid-afternoon at the Beal House and ends back there; the Bad Guys cut the power at sundown.
 2. On the day, open the console's **Show the briefing on the TV** (`briefing.html`) for the whole room.
 3. Press **Start the game** in the console. Every phone switches to "Start your route" (no kickoff code).
 4. At the finale, open the console's **Show the finale on the TV** (`briefing.html?finale`). It shows the dark town and

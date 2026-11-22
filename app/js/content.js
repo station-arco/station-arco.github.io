@@ -4,12 +4,14 @@
 
 window.GAME = {
   title: "Operation Root Hog",
-  hq: "Arco Rec Center",
+  hq: "the Beal House",
 
   // Families sign up ahead of time; their phones count down to this date and wait for the game master to start.
   gameDay: {
     date: "2026-11-26",
-    where: "See you Thanksgiving morning, Thursday, November 26, at the Arco Rec Center.",
+    where: "See you Thanksgiving afternoon, Thursday, November 26, at the Beal House.",
+    // The Bad Guys cut the power at sundown (about 5 pm in Arco that day). The TV countdown counts to this time.
+    powerCut: "17:00",
   },
 
   // "What happened in 2024?" on the front page. Edit freely; it's only story.
@@ -58,7 +60,7 @@ window.GAME = {
       text:
         "Station ARCO to all agents. This is Operator Arco. Do you copy?\n\n" +
         "Big day in Arco. Ambassador Gobbles is here to chair the Thanksgiving Peace Summit, " +
-        "and every family in the valley is invited. The summit opens at noon, and the pies are already in the",
+        "and every family in the valley is invited. The summit dinner starts at sundown, and the pies are already in the",
     },
     {
       scene: "badguys",
@@ -76,7 +78,7 @@ window.GAME = {
       audio: "audio/briefing-04-blackout.mp3",
       text:
         "Before it was Arco, this place was called Root Hog. Fitting, because today we root out every last light. " +
-        "At noon, with every turkey in town in the oven, we cut the power. No ovens, no pie, no Peace Summit.\n\n" +
+        "At sundown, with every turkey in town in the oven, we cut the power. No ovens, no pie, no Peace Summit.\n\n" +
         "We've jammed every relay in the valley. Good luck finding them.\n\nBad Guys out.",
     },
     {
@@ -147,7 +149,7 @@ window.GAME = {
     },
     6: {
       audio: "audio/taunt-3.mp3",
-      text: "This is the Bad Guys. Three digits? Who is helping you? No matter. The last relays are the hard ones, and noon is coming fast. Bad Guys out.",
+      text: "This is the Bad Guys. Three digits? Who is helping you? No matter. The last relays are the hard ones, and sundown is coming fast. Bad Guys out.",
     },
   },
 
@@ -262,9 +264,11 @@ window.GAME = {
         "Since 1920, each graduating class of Butte County High School has painted its year on the rocks above town. " +
         "That's why it's called Number Hill. Some locals like to tell visitors the numbers are high-water marks of the river. They aren't.",
       source: { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Arco,_Idaho" },
-      clue: "Arco was first lit by the atom in 1955. Find the class that graduated 11 years later, and type the two digits painted on the hill.",
+      // The real instructions are written in invisible ink on the Bad Guys memo in the field kit (print/bad-guys-memo.html):
+      // FIND THE CLASS OF 1955 + 11 ON THE HILL. TYPE THE TWO DIGITS.
+      clue: "The Bad Guys memo in your field kit has something hidden at the bottom. Shine your UV light on it, then do what it says.",
       answerKind: "number",
-      hints: ["Each number on the hill is the last two digits of a graduation year.", "1955 plus 11 is 1966. Look for 66."],
+      hints: ["Turn the UV light on and hold it close to the empty space at the bottom of the memo.", "The memo says to find the class of 1955 plus 11. Look for 66 on the hill."],
       junior: { type: "open", prompt: "With binoculars, find the year you were born on the hill. Tap Done when you see it." },
     },
     {
@@ -289,34 +293,28 @@ window.GAME = {
       junior: { type: "honor", prompt: "Find the turkey hiding in the newspaper ads. Tap when you find it." },
     },
     {
+      // The Rec Center sign. (Its id is still "river", from the River Relay it replaced: the server and every saved
+      // route use that id, so it stays.) Two steps: decode the Morse to learn which number to read, then read the sign.
       id: "river",
-      name: "River Relay",
-      audio: "audio/relay-river.mp3",
+      name: "Rec Center Relay",
+      audio: "audio/relay-rec.mp3",
       cluster: "arco",
-      place: "A bridge over the Big Lost River in Arco (stay on the sidewalk)",
-      mapQuery: "Big Lost River, Arco, ID",
+      place: "Arco Rec Center, under the First City sign",
+      mapQuery: "Arco Recreation Center, Arco, ID", // SCOUT: check this lands on the Rec Center
       find:
-        "Our last signal came from above water, or water that used to be there. Find where a road crosses the Big Lost River in town. Stay on the sidewalk.",
+        "Our next jammer hides under a sign that brags about the first atomic lights in the world. It also says how high up you are.",
       transmission:
-        "Station ARCO to all agents.\n\nWe recorded a message the Bad Guys sent the old way, the way Count von Arco's radio stations did it: dots and dashes. " +
-        "Play it as many times as you need and decode it with your Morse card. Over.",
+        "Station ARCO to all agents.\n\nWe caught a Bad Guys message sent the old way, the way Count von Arco's radio stations did it: dots and dashes. " +
+        "Decode it with your Morse card. It tells you which number on the sign to read. Over.",
       history:
-        "The Big Lost River starts high in the mountains and runs down through this valley. It never reaches another river. " +
-        "Past Arco it drains into the ground at the Big Lost River Sinks, and the water keeps traveling underground.",
-      source: { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Big_Lost_River" },
-      clue: "Play the signal and decode it with your Morse card.",
-      morse: "SINKS",
-      answerKind: "word",
-      hints: ["Five letters. The first one is three dots.", "It's where the river goes into the ground."],
-      junior: {
-        type: "open",
-        prompt: "Look at the river. Is there water in it today?",
-        options: [
-          { value: "full", label: "Lots of water" },
-          { value: "low", label: "A little water" },
-          { value: "dry", label: "Dry" },
-        ],
-      },
+        "Arco sits about 5,320 feet above sea level, a little higher than Denver, the Mile High City, at 5,280 feet. " +
+        "The sign here repeats the town's proudest claim: in 1955 it became the first city in the world lit by atomic power.",
+      source: { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Arco,_Idaho" },
+      clue: "Play the signal and decode it with your Morse card. It names something written on the sign. Type the number that goes with it.",
+      morse: "ELEVATION",
+      answerKind: "number",
+      hints: ["The message is nine letters. The first one is a single dot: E.", "It spells ELEVATION. Read the elevation on the sign."],
+      junior: { type: "open", prompt: "Find the word FIRST on the sign. Point to it, then tap Done." },
     },
     {
       id: "island",
@@ -349,13 +347,16 @@ window.GAME = {
     unlockAfter: 3,
     transmission:
       "Station ARCO to your family only.\n\nThis relay is coded for you. No one else in the valley can solve it. Work it out in the car. Over.",
+    // A sealed envelope in the field kit, marked FAMILY RELAY, holds a photo or prop with the family's clue on the back.
+    envelope: "Open the sealed envelope marked FAMILY RELAY in your field kit.",
+    unlocked: "Station ARCO to your family only. Your Family Relay is unlocked. Open the sealed envelope marked FAMILY RELAY in your field kit and work it out in the car. Over.",
     waiting: "Your family's clue isn't ready yet. Operator Arco will send it before the game starts.",
     junior: { type: "honor", prompt: "Junior agents: tell everyone in the car your favorite Thanksgiving food, then tap Done." },
   },
 
   finale: {
-    goTo: "All your relays are back on. Head to the substation: the Arco Rec Center.",
-    goToTwist: "All your relays are back on. Ambassador Gobbles is locked in the substation with the master switch. Head to the Arco Rec Center.",
+    goTo: "All your relays are back on. Head to the substation: Station ARCO headquarters at the Beal House.",
+    goToTwist: "All your relays are back on. Ambassador Gobbles is locked in the substation with the master switch. Head back to the Beal House.",
     lockNote: "The Bad Guys chained the master switch shut with one padlock for every family. This is your family's code. Open your lock on the lockout box, then wait for the other families.",
     quiz: [
       { text: "Arco was once called Root Hog.", truth: true, why: "That was the town's name before it became Arco." },

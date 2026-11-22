@@ -147,7 +147,7 @@
         </figure>
         <button class="link backstory-link" data-action="backstory">Who are the Bad Guys? What happened in 2024?</button>
         <dl class="mission-facts">
-          <div style="--i:0"><dt>When</dt><dd>Thanksgiving morning, Thursday, November 26${days > 0 ? ` (${days === 1 ? "tomorrow" : `${days} days away`})` : ""}. We start together at the Arco Rec Center.</dd></div>
+          <div style="--i:0"><dt>When</dt><dd>Thanksgiving afternoon, Thursday, November 26${days > 0 ? ` (${days === 1 ? "tomorrow" : `${days} days away`})` : ""}. We start together at the Beal House.</dd></div>
           <div style="--i:1"><dt>What</dt><dd>Your family drives between real places in Arco and Moore, cracking clues to bring Station ARCO's radio relays back on.</dd></div>
           <div style="--i:2"><dt>Who</dt><dd>Everyone in the car. Junior agents get puzzles of their own.</dd></div>
         </dl>
@@ -383,12 +383,14 @@
 
   function mainPuzzle(id, r, p) {
     const clue = id === "family" ? S.team.familyClue : r.clue;
-    if (id === "family" && !clue) return `<div class="clue"><p>${esc(GAME.family.waiting)}</p></div>`;
+    const envelope = id === "family" && GAME.family.envelope ? `<p class="envelope-note">${esc(GAME.family.envelope)}</p>` : "";
+    if (id === "family" && !clue) return `<div class="clue">${envelope}<p>${esc(GAME.family.waiting)}</p></div>`;
     const shown = id === "family" ? null : demoAnswer(id, "main");
     if (p.main) return `<div class="clue solved"><p class="ok">Code accepted.</p><p class="muted">${esc(clue)}</p></div>`;
     const hints = r.hints || [];
     return `<div class="clue">
       <h2>Your clue</h2>
+      ${envelope}
       <p>${esc(clue)}</p>
       ${r.morse ? `<button class="btn" data-action="morse" data-id="${id}">Play the signal</button>` : ""}
       <form id="answer" data-target="main" class="answer">
@@ -657,8 +659,10 @@
     const count = restoredIds().length;
     const taunt = (GAME.taunts || {})[count];
     if (taunt && taunt.audio && GAMEAUDIO.preload) GAMEAUDIO.preload(taunt.audio).catch(() => {}); // start loading while the tap is fresh
-    if (gotDigit || taunt) return go("board", { celebrate: id, newDigit: gotDigit, taunt: taunt ? count : 0 });
-    go("relay", { id, justRestored: true, newDigit: false });
+    const unlockNow = id !== "family" && GAME.family.unlocked && restoredPlaces() === GAME.family.unlockAfter && !(S.progress.family && S.progress.family.stage === "restored");
+    if (gotDigit || taunt) go("board", { celebrate: id, newDigit: gotDigit, taunt: taunt ? count : 0 });
+    else go("relay", { id, justRestored: true, newDigit: false });
+    if (unlockNow) setTimeout(() => showTransmission({ sender: "Operator Arco", voice: "operator", body: GAME.family.unlocked, shown: true }), taunt ? 15000 : 2500);
   }
 
   // While offline we can't know the digits, so we keep what we have.

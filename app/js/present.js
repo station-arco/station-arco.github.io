@@ -48,12 +48,12 @@
     tick();
   }
 
-  // ---------- countdown to noon ----------
+  // ---------- countdown to the power cut (sundown) ----------
   function untilNoon() {
     const now = new Date();
-    const noon = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0);
-    if (now >= noon) noon.setDate(noon.getDate() + 1);
-    const s = Math.floor((noon - now) / 1000);
+    const [hh, mm] = String((GAME.gameDay && GAME.gameDay.powerCut) || "17:00").split(":").map(Number);
+    const cut = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hh, mm || 0, 0);
+    const s = Math.max(0, Math.floor((cut - now) / 1000));
     const two = (n) => String(n).padStart(2, "0");
     return `${Math.floor(s / 3600)}:${two(Math.floor((s % 3600) / 60))}:${two(s % 60)}`;
   }
@@ -241,7 +241,7 @@
   function renderFinale(armed) {
     if (!armed) {
       root.innerHTML = `<section class="p-card">${plate}<h1>The finale</h1>
-        <p>Leave this on the TV at the Rec Center. It lights up when you throw the master switch in the console.</p>
+        <p>Leave this on the TV at the Beal House. It lights up when you throw the master switch in the console.</p>
         <button class="btn primary" data-act="arm">Show the dark town</button>
         <p class="help" style="margin-top:3vh">F: full screen · L: light it by hand if the TV misses the switch</p></section>`;
       return;

@@ -1,5 +1,10 @@
 # Voice-over script
 
+**Re-record for the Nov 22 changes (afternoon game, start at the Beal House):** `briefing-02-summit.mp3`,
+`briefing-04-blackout.mp3` and `taunt-3.mp3` now say "sundown" instead of "noon", and `relay-rec.mp3` is new.
+Save over the old files with the same names. Until you do, the old recordings (saying noon) still play, and the
+phone reads the Rec Center line aloud.
+
 Save every recording in **`app/audio/`** with the exact file name shown (lowercase, `.mp3`).
 The game already points at these names. Any file that isn't there yet is read aloud by the phone's voice,
 so you can record them a few at a time.
@@ -23,7 +28,7 @@ screen, then fades out under the Bad Guys' first words.
 **briefing-02-summit.mp3** *(gets cut off)*
 > Station ARCO to all agents. This is Operator Arco. Do you copy?
 >
-> Big day in Arco. Ambassador Gobbles is here to chair the Thanksgiving Peace Summit, and every family in the valley is invited. The summit opens at noon, and the pies are already in the
+> Big day in Arco. Ambassador Gobbles is here to chair the Thanksgiving Peace Summit, and every family in the valley is invited. The summit dinner starts at sundown, and the pies are already in the
 
 **briefing-05-back-on-air.mp3**
 > Station ARCO, back on the air. Agents, do you copy?
@@ -71,10 +76,10 @@ screen, then fades out under the Bad Guys' first words.
 >
 > In 1910 a 19-year-old named Clarence Bottolfsen came to Arco to run the town newspaper, the Arco Advertiser. He ended up governor of Idaho. The Bad Guys hid a word inside an old front page. Open the newspaper in your field kit. Over.
 
-**relay-river.mp3** (River Relay)
+**relay-rec.mp3** (Rec Center Relay, new)
 > Station ARCO to all agents.
 >
-> We recorded a message the Bad Guys sent the old way, the way Count von Arco's radio stations did it: dots and dashes. Play it as many times as you need and decode it with your Morse card. Over.
+> We caught a Bad Guys message sent the old way, the way Count von Arco's radio stations did it: dots and dashes. Decode it with your Morse card. It tells you which number on the sign to read. Over.
 
 **relay-island.mp3** (Island Relay, Moore)
 > Station ARCO to all agents.
@@ -96,7 +101,7 @@ screen, then fades out under the Bad Guys' first words.
 > Remember us? You took our turkey in 2024. This year we're taking the whole town.
 
 **briefing-04-blackout.mp3**
-> Before it was Arco, this place was called Root Hog. Fitting, because today we root out every last light. At noon, with every turkey in town in the oven, we cut the power. No ovens, no pie, no Peace Summit.
+> Before it was Arco, this place was called Root Hog. Fitting, because today we root out every last light. At sundown, with every turkey in town in the oven, we cut the power. No ovens, no pie, no Peace Summit.
 >
 > We've jammed every relay in the valley. Good luck finding them.
 >
@@ -109,7 +114,7 @@ screen, then fades out under the Bad Guys' first words.
 > Bad Guys to the so-called agents. Two digits. Fine. You're halfway, and we are getting annoyed. Nobody finds the rest. Nobody. Bad Guys out.
 
 **taunt-3.mp3** (after its 6th relay)
-> This is the Bad Guys. Three digits? Who is helping you? No matter. The last relays are the hard ones, and noon is coming fast. Bad Guys out.
+> This is the Bad Guys. Three digits? Who is helping you? No matter. The last relays are the hard ones, and sundown is coming fast. Bad Guys out.
 
 **twist-gobbles.mp3** (the mid-game twist, sent from the console's "Send the Gobbles twist" button)
 > Breaking in on this frequency. Your ambassador would not stop talking about gratitude, so we took him. Ambassador Gobbles is locked inside the substation with the master switch. Bring every code you've got. Bad Guys out.
