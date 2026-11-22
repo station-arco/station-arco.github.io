@@ -305,7 +305,7 @@ window.GAME = {
         "Find where Arco goes to play. A sign there brags that this town beat the whole world to atomic light, and it knows how far you are above the sea.",
       // The Bad Guys bulletin in the field kit (print/bad-guys-bulletin.html) is a fold-in: folded right, it names this stop.
       fold: {
-        boast: "We hid our next stop in plain sight. Our bulletin is a jumble of letters, and the only way to read it is to make A and B meet. Good luck with that.",
+        boast: "We hid our next stop in plain sight, right there in our bulletin. It's just a jumble of letters. Nobody will ever read it.",
         steps: [
           "Get the Bad Guys bulletin out of your field kit.",
           "Fold it back on the dashed line.",
