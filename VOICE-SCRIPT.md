@@ -81,10 +81,10 @@ screen, then fades out under the Bad Guys' first words.
 >
 > We caught a Bad Guys message sent the old way, the way Count von Arco's radio stations did it: dots and dashes. Decode it with your Morse card. It tells you which number on the sign to read. Over.
 
-**relay-island.mp3** (Island Relay, Moore)
+**relay-island.mp3** (Island Relay, Moore; re-record: now the stage line puzzle)
 > Station ARCO to all agents.
 >
-> You're in Moore, which was settled as Island before 1890. Two markers stand in this park. One is about a pioneer family. The other is about the valley's first church. The Bad Guys need you to do some building math. Over.
+> You're in Moore, which was settled as Island before 1890. Benjamin Pearson ran a stage line from here all the way to Challis. The Bad Guys hid this relay's code on his old stage route. Read the two markers in this park, then take a ride on the stage line in your field kit. Over.
 
 **relay-family.mp3** (Family Relay)
 > Station ARCO to your family only.

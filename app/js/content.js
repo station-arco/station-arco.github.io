@@ -344,16 +344,23 @@ window.GAME = {
       find:
         "Before this town had its name, people called it Island. Find the park named for the man who ran the stage line to Challis.",
       transmission:
-        "Station ARCO to all agents.\n\nYou're in Moore, which was settled as Island before 1890. Two markers stand in this park. " +
-        "One is about a pioneer family. The other is about the valley's first church. The Bad Guys need you to do some building math. Over.",
+        "Station ARCO to all agents.\n\nYou're in Moore, which was settled as Island before 1890. Benjamin Pearson ran a stage line from here all the way to Challis. " +
+        "The Bad Guys hid this relay's code on his old stage route. Read the two markers in this park, then take a ride on the stage line in your field kit. Over.",
       history:
         "Benjamin A. Pearson homesteaded in this valley in 1884 and ranched here for 45 years. In 1896 he ran freight and a stage line " +
         "from Blackfoot to Challis, and in 1918 he became Butte County's first state senator. The marker beside his tells about the " +
         "valley's first church: built in 1898, moved to Moore in 1910, and torn down in 1950.",
       source: { label: "HMDB", url: "https://www.hmdb.org/m.asp?m=140067" },
-      clue: "The church marker gives the size of the 1898 chapel in feet. Multiply the two numbers.",
-      answerKind: "number",
-      hints: ["Look for two numbers with the word by between them.", "38 times 54."],
+      // The stage line map, ticket (print/stage-line.html) and stagecoach (print3d) are in the field kit. The ticket's five
+      // legs come from the markers: 10 children, built 1898, torn down 1950, homesteaded 1884, chapel 38 by 54 feet.
+      // Riding 10, 8, 5, 4, 3 stops from BLACKFOOT spells COACH.
+      clue: "Get out your stage ticket, map and stagecoach. Every leg on the ticket gets its number from the markers here. Ride the legs from BLACKFOOT and write down the letter at each stop. The five letters are the code.",
+      answerKind: "word",
+      hints: [
+        "BLACKFOOT counts as a stop when you pass it. The first leg is 10 stops, one for each Pearson child.",
+        "The legs are 10, 8, 5, 4 and 3 stops.",
+        "It's what Benjamin Pearson drove: C _ _ C H.",
+      ],
       junior: { type: "count", prompt: "Count the Pearson children named on the marker." },
     },
   ],

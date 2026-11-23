@@ -28,7 +28,7 @@ window.ANSWER_HASHES = {
       "junior": null
     },
     "island": {
-      "main": "1d8f6d95d070710a2c661e09166047bb9850ffcf364f9245b48a7b289ab1b8a7",
+      "main": "2a3a02474841e4b307fcacff5587f52aa9f4bae3ebe3c4601dac815919f477e1",
       "junior": "735ec0cd8818913795568bcb6980e8d9f55e9160df5a4b95096786e544066df8"
     }
   }
